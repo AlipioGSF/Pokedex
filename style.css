@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.fotoPoke{
+    @apply bg-center bg-auto ;
+    background-image: url();
+}
+
+.identify{
+    @apply text-2xl text-blue-50;
+}
+
+.ability{
+    @apply text-center mx-auto text-cyan-100 border-b border-cyan-50; 
+}
