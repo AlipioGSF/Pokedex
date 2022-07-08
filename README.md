@@ -6,3 +6,6 @@ Para a criação utilizei
  - HTML
  - CSS / TAILWINDCSS
  - JS
+
+
+Acesse a [Pokedex](http://pokedex-snowy.vercel.app/)
