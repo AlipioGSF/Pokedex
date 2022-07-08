@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+body{
+    background-image: url(fundo.png);
+    background-repeat: no-repeat;
+    background-size: 133%;
+    background-position-y: calc(100% + 42vh);
+}
+
 .pokedex{
     @apply flex w-4/6 h-3/6 bg-red-600 p-5 mx-auto my-auto relative shadow-lg shadow-gray-800;
 }

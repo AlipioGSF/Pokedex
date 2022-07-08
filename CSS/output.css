@@ -695,6 +695,13 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+body{
+  background-image: url(fundo.png);
+  background-repeat: no-repeat;
+  background-size: 133%;
+  background-position-y: calc(100% + 42vh);
+}
+
 .pokedex {
   position: relative;
   margin-left: auto;
