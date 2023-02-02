@@ -3,23 +3,21 @@ const habiPoke = document.querySelector('.habiPoke');
 const tipoPoke = document.querySelector('.tipoPoke');
 
 
-function coletaDados(pokemon){
-    nomePoke.innerHTML = '';
+function coletaDados(poke){
+    nomePoke.innerHTML = "";
     tipoPoke.innerHTML = '';
     habiPoke.innerHTML = '';
-    axios(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
-    .then(json => info = json.data)
-    .catch(e => console.log(e));    
-    carregaNome(info.name, info.id);
-    carregaFoto(info.id);
-    const tipos = info.types
-    for(let tipo of tipos){
-       carregaTipo(tipo.type.name.toUpperCase());
-    }
-
-    const habilidades = info.moves
-    for(let move of habilidades){
-        carregaHabilidades(move.move.name);
+    for(let pokemon of Pokemons){
+        if(poke === pokemon.nome || poke === pokemon.id){
+            carregaNome(pokemon.nome, pokemon.id);
+            carregaFoto(pokemon.id);
+            for(let tipo of pokemon.tipos){
+                carregaTipo(tipo.type.name.toUpperCase());
+            }
+            for(let move of pokemon.habilidades){
+                carregaHabilidades(move.move.name);
+            }
+        }
     }
 }
 

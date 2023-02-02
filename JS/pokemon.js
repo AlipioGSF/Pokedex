@@ -1,20 +1,22 @@
-const display = document.querySelector('.display');
-const nomesPokes = [];
+const Pokemons = [];
 
-for(let i=1;i<=891;i++){
-    axios(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-    .then(html => {
-        testeAPI(html.data);
-        const poke = html.data;
-        const div = document.createElement('div');
-        div.classList.add('pokesList')
-        div.innerHTML = poke.name;
-        display.appendChild(div);
-    })
-    .catch(e => console.log(e));
-    
-};
+class Pokemon{
+    constructor(id, nome, tipos, habilidades){
+        this.id = id,
+        this.nome = nome,
+        this.tipos = tipos,
+        this.habilidades = habilidades;
+    }
+}
 
-function testeAPI(dado){
-    nomesPokes.push(dado.name);
+async function listarPokemons(){
+    for(let i=1;i<=1008;i++){
+        await axios(`https://pokeapi.co/api/v2/pokemon/${i}/`)
+        .then(response => {
+            const poke = response.data;
+            Pokemons.push(new Pokemon(poke.id, poke.name, poke.types,poke.moves));
+        })
+        .catch(e => console.log(e));
+        if(i == 40||i==100||i==300||i==500||i==600||i==800||i==1008) atualizarLista();
+    };
 }

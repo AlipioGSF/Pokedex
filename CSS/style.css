@@ -4,52 +4,38 @@
 
 
 body{
-    background-image: url(fundo.png);
-    background-repeat: no-repeat;
-    background-size: 133%;
-    background-position-y: calc(100% + 42vh);
 }
 
 .pokedex{
     @apply flex w-4/6 h-3/6 bg-red-600 p-5 mx-auto my-auto relative shadow-lg shadow-gray-800;
 }
-
 .pokesList{
     @apply border-b border-cyan-300 text-lg pl-2 font-light;
     cursor: pointer;
 }
-
-
 .descricao{
     @apply w-5/6 p-2 mx-auto text-center text-sm bg-white text-black flex items-center border-2 rounded-3xl border-black;
 }
-
-
 .fotoPoke{
     @apply bg-center bg-slate-200 bg-no-repeat border-2 ;
     background-size: calc(100% - 5vh);
     background-image: url(https://www.purarteadesivos.com.br/wp-content/uploads/2017/04/Pok%C3%A9mon-go-300x300.png);
 }
-
 .identify{
     @apply text-base text-black;
 }
-
 .ability{
     @apply text-center mx-auto text-cyan-100 border-b border-cyan-50; 
 }
-
 .cardType1{
     @apply border-2 flex font-semibold items-center rounded-xl px-2;
 }
 .cardType2{
     @apply border-2 flex font-semibold items-center rounded-xl px-2;
 }
-
 .habilidade{
     @apply h-1/6 w-full text-center text-4xl text-white font-black rounded-xl;
 }
-
 .listaHabilidades{
     @apply h-full bg-cyan-600 w-full text-black overflow-y-auto
 }
