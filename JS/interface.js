@@ -4,11 +4,12 @@ const tipoPoke = document.querySelector('.tipoPoke');
 
 
 function coletaDados(poke){
-    nomePoke.innerHTML = "";
-    tipoPoke.innerHTML = '';
-    habiPoke.innerHTML = '';
+    if(poke == null || poke == '') return;
     for(let pokemon of Pokemons){
         if(poke === pokemon.nome || poke === pokemon.id){
+            nomePoke.innerHTML = "";
+            tipoPoke.innerHTML = '';
+            habiPoke.innerHTML = '';
             carregaNome(pokemon.nome, pokemon.id);
             carregaFoto(pokemon.id);
             for(let tipo of pokemon.tipos){
