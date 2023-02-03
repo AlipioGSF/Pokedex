@@ -20,6 +20,8 @@ function coletaDados(poke){
             }
         }
     }
+    atualizarLista();
+    input.value = '';
 }
 
 function carregaHabilidades(move){
