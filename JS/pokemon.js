@@ -24,7 +24,10 @@ async function listarPokemons(){
             atualizarLista();
         });
         if(i%25==0)atualizarLista();
-        if(stop === true)break;
+        if(stop === true){
+            document.querySelector("#sync").style.backgroundColor = "#02E516";
+            break;
+        }
         i++;
     };
 }
